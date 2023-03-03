@@ -16,4 +16,11 @@ if __name__ == "__main__":
     # Tests will run your command using a system call.
     # To test your program with arguments, run it from the command line
     # (see README.md for more details)
-    pass
+    parser = argparse.ArgumentParser(description=\
+                                     'Collects filenames for input and output')
+    parser.add_argument('infile', 'outfile', help = 'File with lines to count', nargs='+')
+    args = parser.parse_args()
+    arr = np.loadtext(infile)
+    mean_zero -= np.mean(arr, axis=0)
+    processed /= np.std(mean_zero, axis=0)
+    np.savetxt(outfile)

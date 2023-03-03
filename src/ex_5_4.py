@@ -18,4 +18,8 @@ output_file = output_dir / "ex_5_4-processed.csv"
 
 # Process the input data using numpy
 
+arr = np.loadtxt(input_file)
+processed = np.where(arr<0, 0, arr)
+
 # Save the result to output_file
+np.savetxt(output_file)
