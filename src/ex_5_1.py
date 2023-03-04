@@ -23,6 +23,6 @@ if __name__ == "__main__":
                                      'This program prints the number of lines in infile.')
     parser.add_argument('infile', help = 'File with lines to count', nargs='+')
     args = parser.parse_args()
-    result = main(args.infile)
+    result = line_count(args.infile)
     
                                      
