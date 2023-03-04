@@ -23,8 +23,8 @@ if __name__ == "__main__":
 
     # Complete the data processing steps using numpy here.
     arr = np.loadtxt(INFILE)
-    arr = arr-=np.mean(arr, axis=0)
-    arr = arr/= np.std(arr, axis=0)
+    arr -= np.mean(arr, axis=0)
+    arr /= np.std(arr, axis=0)
     processed = arr
 
     # Save the output to OUTFILE using numpy routines.
