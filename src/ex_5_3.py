@@ -18,11 +18,11 @@ if __name__ == "__main__":
     # (see README.md for more details)
     parser = ArgumentParser(description=\
                                      'This program applies a standard scale transform to the data in infile and writes it to outfile.')
-    parser.add_argument('INFILE', help = 'Input file')
-    parser.add_argument('OUTFILE', help = 'Output file')
+    parser.add_argument('infile', help = 'Input file')
+    parser.add_argument('outfile', help = 'Output file')
     args = parser.parse_args()
-    arr = np.loadtxt(INFILE)
+    arr = np.loadtxt(args.infile)
     arr -= np.mean(arr, axis=0)
     arr /= np.std(mean_zero, axis=0)
     processed = arr
-    np.savetxt(OUTFILE, processed)
+    np.savetxt(args.outfile, processed)
