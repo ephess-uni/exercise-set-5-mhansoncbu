@@ -21,7 +21,7 @@ if __name__ == "__main__":
     # (see README.md for more details)
     parser = argparse.ArgumentParser(description=\
                                      'This program prints the number of lines in infile.')
-    parser.add_argument('infile', help = 'File with lines to count', nargs='+')
+    parser.add_argument('infile', help = 'File with lines to count')
     args = parser.parse_args()
     result = line_count(args.infile)
     
