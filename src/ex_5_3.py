@@ -21,8 +21,8 @@ if __name__ == "__main__":
     parser.add_argument('infile', help = 'Input file')
     parser.add_argument('outfile', help = 'Output file')
     args = parser.parse_args()
-    arr = np.loadtxt(infile)
+    arr = np.loadtxt(INFILE)
     arr -= np.mean(arr, axis=0)
     arr /= np.std(mean_zero, axis=0)
     processed = arr
-    np.savetxt(outfile, processed)
+    np.savetxt(OUTFILE, processed)
